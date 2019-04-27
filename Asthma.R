@@ -9,9 +9,9 @@ library(rvest)
 library(choroplethr)
 library(choroplethrMaps)
 library(ggplot2)
-#pollutant = Annual average ambient concentrations of PM2.5 in micrograms per cubic meter (based on seasonal averages and daily measurement)
+#pollutant = Annual average ambient concentrations of PM2.5 in micrograms per cubic meter 
+#(based on seasonal averages and daily measurement)
 
-setwd("C:/Users/syrav/Desktop/19spring/Data")
 air_asthma_ppl <- read_csv("air_asthma_ppl.csv") 
 temperature<- read_csv("temperature.csv") 
 ppl<- read_csv("ppl.csv") 
@@ -436,7 +436,7 @@ qqline(resid(log_rate_without_Harmon3.lme4))
 
 
 
-# remove Harmon county
+# remove Harmon county as an outlier
 rate2<-rate %>% 
   filter(!grepl('harmon', CountyName))
 # rate2
